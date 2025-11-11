@@ -1,0 +1,7 @@
+name: SCS-Tool-Addon
+main: space.retri.minecraft.scstool.SCSToolPlugin
+version: 1.0.0
+api-version: 1.21
+authors: [Retribyte]
+description: Assigns basic SimpleClaimSystem functionality to an in-game tool
+depend: [SimpleClaimSystem]
