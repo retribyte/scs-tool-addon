@@ -6,7 +6,7 @@
 
     <groupId>space.retri.minecraft.scstool</groupId>
     <artifactId>scs-tool-addon</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>SCS-Tool-Addon</name>

@@ -49,7 +49,7 @@ public final class SCSToolPlugin extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        getLogger().info("Player " + event.getPlayer().getName() + " has interacted using " + event.getItem());
+        // getLogger().info("Player " + event.getPlayer().getName() + " has interacted using " + event.getItem());
         if (event.getItem() != null && event.getItem().getType() == TOOL) {
             if (event.getAction() == org.bukkit.event.block.Action.RIGHT_CLICK_AIR || event.getAction() == org.bukkit.event.block.Action.RIGHT_CLICK_BLOCK) {
                 event.getPlayer().performCommand("claim see");
@@ -63,10 +63,10 @@ public final class SCSToolPlugin extends JavaPlugin implements Listener {
             Chunk chunk = null;
             Block block = event.getClickedBlock();
             if (block == null) {
-                getLogger().info("No block clicked, using player location");
+                // getLogger().info("No block clicked, using player location");
                 chunk = event.getPlayer().getLocation().getChunk();
                 if (chunk == null) {
-                    getLogger().info("No chunk found for player location.");
+                    // getLogger().info("No chunk found for player location.");
                     return;
                 }
             } else {
@@ -126,7 +126,7 @@ public final class SCSToolPlugin extends JavaPlugin implements Listener {
             return;
         }
         
-        getLogger().info("Player " + event.getPlayer().getName() + " has interacted with " + event.getRightClicked().getName() + " using " + event.getPlayer().getInventory().getItemInMainHand());
+        // getLogger().info("Player " + event.getPlayer().getName() + " has interacted with " + event.getRightClicked().getName() + " using " + event.getPlayer().getInventory().getItemInMainHand());
 
         if (event.getPlayer().getInventory().getItemInMainHand() != null && event.getPlayer().getInventory().getItemInMainHand().getType() == TOOL) {
             getLogger().info("Adding player " + event.getPlayer().getName() + " to claim of " + ((Player) event.getRightClicked()).getName());
